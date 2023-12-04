@@ -68,7 +68,7 @@ const submitForm = () => {
         }
       );
   }
-  ё;
+
   gapi.load("client", start);
 };
 
