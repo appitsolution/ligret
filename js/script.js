@@ -24,8 +24,9 @@ const submitForm = () => {
   function start() {
     gapi.client
       .init({
-        apiKey: "a34a67120511351de790e484c69d53e10c9dbf57",
-        clientId: "105795474198556043714.apps.googleusercontent.com",
+        apiKey: "aGOCSPX-4i1SvB8hprKAv1LeRrua_cZZ0-yM",
+        clientId:
+          "663713516697-qbest32iifbljj34dqihc14b2if7s40f.apps.googleusercontent.com",
         scope: "profile",
       })
       .then(function () {
