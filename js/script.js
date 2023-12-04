@@ -26,6 +26,7 @@ const submitForm = () => {
       .init({
         apiKey: "a34a67120511351de790e484c69d53e10c9dbf57",
         clientId: "105795474198556043714.apps.googleusercontent.com",
+        scope: "profile",
       })
       .then(function () {
         return gapi.client.people.people.get({
