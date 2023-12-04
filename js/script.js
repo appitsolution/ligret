@@ -24,10 +24,8 @@ const submitForm = () => {
   function start() {
     gapi.client
       .init({
-        apiKey: "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",
-        clientId:
-          "267145899813-qfs54lb9il2oo9e1gnln8rqfcn1c6nd2.apps.googleusercontent.com",
-        scope: "profile",
+        apiKey: "a34a67120511351de790e484c69d53e10c9dbf57",
+        clientId: "105795474198556043714.apps.googleusercontent.com",
       })
       .then(function () {
         return gapi.client.people.people.get({
@@ -43,7 +41,7 @@ const submitForm = () => {
             .getAuthInstance()
             .currentUser.get()
             .getAuthResponse().access_token;
-          const spreadsheetId = "unitedtrade-407114";
+          const spreadsheetId = "test-table-407114";
           const range = "List1!A:A";
 
           fetch(
