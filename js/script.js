@@ -36,7 +36,7 @@ const inputMessage = document.getElementById("input-message");
 const submitForm = () => {
   if (!inputName.value || !inputPhone.value || !inputMessage.value) return;
 
-  fetch(`http://localhost:3000/add`, {
+  fetch(`https://api.unitedtrade.co/add`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
