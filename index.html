@@ -1536,13 +1536,13 @@
         outline: none;
         cursor: text;
       }
-      .input::placeholder {
+      /* .input::placeholder {
         opacity: 0;
         visibility: hidden;
         transition: opacity 0.2s ease-in-out 0s;
         color: #adb0bd;
         font-size: 16px;
-      }
+      } */
       input[type="email"],
       input[type="tel"],
       textarea {
@@ -3161,6 +3161,10 @@
       .fade2-leave-to[data-v-40d821b5] {
         transform: translate(0, 40px);
       }
+
+      .form-label {
+        display: none;
+      }
     </style>
     <style type="text/css">
       .form__line[data-v-5cbcd29a] {
@@ -4690,7 +4694,7 @@ https://flickity.metafizzy.co
                   >
                   <input
                     data-v-097b8f9a=""
-                    id="input151"
+                    id="input-name"
                     type="text"
                     name="name"
                     placeholder="Your name"
@@ -4715,9 +4719,9 @@ https://flickity.metafizzy.co
                   <input
                     data-v-097b8f9a=""
                     type="text"
-                    id="input153"
+                    id="input-phone"
                     name="phone"
-                    placeholder="+ 38 (000) 000 00 00"
+                    placeholder="Phone number"
                     class="input"
                   />
                 </div>
@@ -4738,7 +4742,7 @@ https://flickity.metafizzy.co
                   >
                   <textarea
                     data-v-1527bbd1=""
-                    id="input156"
+                    id="input-message"
                     type="text"
                     name="text"
                     placeholder="Message"
@@ -4801,7 +4805,6 @@ https://flickity.metafizzy.co
         </div>
       </div>
     </div>
-    <script src="https://apis.google.com/js/api.js"></script>
     <script src="./js/script.js"></script>
   </body>
 </html>

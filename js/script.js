@@ -19,22 +19,34 @@ contactUsButton.addEventListener("click", changeModalWindow);
 leaveRequestButton.addEventListener("click", changeModalWindow);
 leaveRequestButton2.addEventListener("click", changeModalWindow);
 closeButton.addEventListener("click", changeModalWindow);
+const inputName = document.getElementById("input-name");
+const inputPhone = document.getElementById("input-phone");
+const inputMessage = document.getElementById("input-message");
+
+// const labelUp = ({ target }) => {
+//   if (target.value) {
+//     target.style.top = "0px";
+//   } else {
+//     target.style.top = "23px";
+//   }
+// };
+
+// inputName.addEventListener("input", labelUp);
 
 const submitForm = () => {
-  const spreadsheetId = "test-table-407114";
-  const range = "List1!A:A";
-  const apiKey = "aGOCSPX-4i1SvB8hprKAv1LeRrua_cZZ0-yM";
+  if (!inputName.value || !inputPhone.value || !inputMessage.value) return;
 
-  fetch(
-    `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${range}:append?valueInputOption=USER_ENTERED&key=${apiKey}`,
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ values: [["data1", "data2"]] }),
-    }
-  )
+  fetch(`http://localhost:3000/add`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify([
+      inputName.value,
+      inputPhone.value,
+      inputMessage.value,
+    ]),
+  })
     .then((response) => response.json())
     .then((data) => console.log(data))
     .catch((error) => console.error("Error:", error));
